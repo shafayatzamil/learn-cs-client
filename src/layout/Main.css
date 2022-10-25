@@ -1,7 +1,7 @@
 .background-set{
     background-image: url('../images/background-2.jpg');
     background-repeat: no-repeat;
-    height: 500px;
-    background-size:contain;
+    height: 700px;
+    /* background-size:contain; */
 
 }

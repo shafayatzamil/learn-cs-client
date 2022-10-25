@@ -2,6 +2,17 @@
 import React from 'react'
 
 const Register = () => {
+
+    const handleSubmit=(event)=>{
+        event.preventDefault();
+        const name= event.target.name.value;
+        const photourl= event.target.photourl.value;
+        const email= event.target.email.value;
+        const password= event.target.password.value;
+        console.log(name,photourl,email,password);
+    }
+
+
   return (
     <div className='flex justify-center items-center pt-8'>
       <div className='flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900'>
@@ -13,6 +24,7 @@ const Register = () => {
           noValidate=''
           action=''
           className='space-y-12 ng-untouched ng-pristine ng-valid'
+          onSubmit={handleSubmit}
         >
           <div className='space-y-4'>
             <div>
@@ -35,8 +47,8 @@ const Register = () => {
               <input
                 type='text'
                 name='photourl'
-                id='name'
-                placeholder='Enter photourl Here'
+                id='photourl'
+                placeholder='Enter Your photourl Here'
                 className='w-full px-3 py-2 border rounded-md border-gray-300 focus:border-gray-900 bg-gray-200 text-gray-900'
                 data-temp-mail-org='0'
               />
