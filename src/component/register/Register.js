@@ -1,7 +1,14 @@
 
 import React from 'react'
+import { useContext } from 'react';
+import { AuthContext } from '../../context/UserContext';
+import { Link, useNavigate } from 'react-router-dom';
+
+
 
 const Register = () => {
+    const {createUser,googleSignIn,setUser} =useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleSubmit=(event)=>{
         event.preventDefault();
@@ -10,7 +17,36 @@ const Register = () => {
         const email= event.target.email.value;
         const password= event.target.password.value;
         console.log(name,photourl,email,password);
+
+        createUser(email,password)
+        .then((result)=>{
+            const user = result.user;
+            console.log(user);
+            // setUser(user);
+            navigate('/login');
+            
+
+        })
+        .catch((error)=>{
+            console.error(error);
+        })
     }
+
+    const handleWithGoogle=()=>{
+      googleSignIn()
+      .then((result)=>{
+        const user= result.user;
+        console.log(user);
+        navigate('/');
+        // setUser(user);
+      })
+      .then((error)=>{
+        console.error(error);
+      })
+
+    }
+
+
 
 
   return (
@@ -100,7 +136,7 @@ const Register = () => {
           <div className='flex-1 h-px sm:w-16 dark:bg-gray-700'></div>
         </div>
         <div className='flex justify-center space-x-4'>
-          <button aria-label='Log in with Google' className='p-3 rounded-sm'>
+          <button onClick={handleWithGoogle} aria-label='Log in with Google' className='p-3 rounded-sm'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 32 32'
@@ -130,10 +166,9 @@ const Register = () => {
         </div>
         <p className='px-6 text-sm text-center text-gray-400'>
           Already have an account yet?{' '}
-          <a href='#' className='hover:underline text-gray-600'>
+          <Link to='/login' className='hover:underline text-gray-600'>
             Sign In
-          </a>
-          .
+          </Link>
         </p>
       </div>
     </div>
