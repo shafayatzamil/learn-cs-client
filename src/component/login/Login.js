@@ -1,4 +1,12 @@
 const Login = () => {
+
+    const hadleSubmit= (event)=>{
+        event.preventDefault();
+        const email = event.target.email.value;
+        const password =event.target.password.value;
+        console.log(email,password);
+    }
+
     return (
       <div className='flex justify-center items-center pt-8'>
         <div className='flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-100 text-gray-900'>
@@ -12,6 +20,7 @@ const Login = () => {
             noValidate=''
             action=''
             className='space-y-6 ng-untouched ng-pristine ng-valid'
+            onSubmit={hadleSubmit}
           >
             <div className='space-y-4'>
               <div>

@@ -52,6 +52,9 @@ const Navbar = () => {
             <Link to='login' className='mr-5 hover:text-gray-900'>
               Login
             </Link>
+            <Link to='register' className='mr-5 hover:text-gray-900'>
+              register
+            </Link>
           </nav>
         </div>
       </header>
