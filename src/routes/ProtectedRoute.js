@@ -6,7 +6,11 @@ const ProtectedRoute = ({ children }) => {
    const { user } = useContext(AuthContext)
    const location = useLocation()
 
-   return user && user.uid ? children : <Navigate to='/login' state={{ from: location.pathname }} replace={true} />
+   if (user && user.uid) {
+      return children
+   }
+
+   return <Navigate to='/login' state={{ from: location.pathname }} replace />
 }
 
 export default ProtectedRoute
