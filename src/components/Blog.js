@@ -4,7 +4,7 @@ import React from "react";
 const Blog = () => {
   return (
     <div className="border border-indigo-600">
-      <div className="m-4">
+      <div className="m-4  border">
         <h1 className="text-4xl"> what is cors?</h1>
         <p>
           CORS is shorthand for Cross-Origin Resource Sharing. It is a mechanism
@@ -14,7 +14,7 @@ const Blog = () => {
         </p>
       </div>
 
-      <div className="m-4">
+      <div className="m-4 border">
         <h1 className="text-4xl">
           Why are you using firebase? What other options do you have to
           implement authentication?
@@ -33,7 +33,7 @@ const Blog = () => {
         </p>
       </div>
 
-      <div className="m-4">
+      <div className="m-4 border">
         {" "}
         <h1 className="text-4xl">How does the private route work?</h1>
         <p>
@@ -45,7 +45,7 @@ const Blog = () => {
         </p>
       </div>
 
-      <div className="m-4">
+      <div className="m-4 border">
         <h1 className="text-4xl">What is Node? How does Node work?</h1>
         <p>
           Node.js is an open-source backend javascript runtime environment. It

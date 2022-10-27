@@ -1,12 +1,11 @@
 import React, { useContext, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import { AuthContext } from '../context/AuthContext';
 
 // register page with authentication
 const Register = () => {
    const [signupError, setSignupError] = useState('');
    const { createUser, googleSignIn, signInWithGithub, setUser, setIsLoggedIn } = useContext(AuthContext);
-   const navigate = useNavigate();
 
    const handleSubmit = (e) => {
       e.preventDefault();
@@ -18,8 +17,10 @@ const Register = () => {
       createUser(email, password)
          .then((result) => {
             const user = result.user;
+            localStorage.setItem('user', JSON.stringify(user))
             console.log(user);
-            navigate('/login');
+            setUser(user);
+            setIsLoggedIn(true)
          })
          .catch((error) => {
             console.error(error);
@@ -31,6 +32,7 @@ const Register = () => {
       googleSignIn()
          .then((result) => {
             const user = result.user;
+            localStorage.setItem('user', JSON.stringify(user))
             console.log(user);
             setUser(user);
             setIsLoggedIn(true)
@@ -45,7 +47,10 @@ const Register = () => {
       signInWithGithub()
          .then((result) => {
             const user = result.user;
+            localStorage.setItem('user', JSON.stringify(user))
             console.log(user);
+            setUser(user);
+            setIsLoggedIn(true)
          })
          .catch((error) => {
             console.error(error);

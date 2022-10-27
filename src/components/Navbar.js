@@ -36,6 +36,11 @@ const Navbar = () => {
          </ul>
 
          <div className='flex gap-3 items-center'>
+         <div className="form-control">
+         <label className="label cursor-pointer">
+            <input type="checkbox" className="toggle toggle-primary" checked />
+         </label>
+         </div>
             {user && user.uid
                ? (
                   <React.Fragment>

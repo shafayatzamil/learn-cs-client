@@ -38,6 +38,7 @@ const Login = () => {
          .then((result) => {
             const user = result.user;
             console.log(user.photoURL);
+            localStorage.setItem('user', JSON.stringify(user))
             setUser(user);
             setIsLoggedIn(true)
          })
@@ -51,6 +52,7 @@ const Login = () => {
       signInWithGithub()
          .then((result) => {
             const user = result.user;
+            localStorage.setItem('user', JSON.stringify(user))
             console.log(user);
             setUser(user);
             setIsLoggedIn(true)
