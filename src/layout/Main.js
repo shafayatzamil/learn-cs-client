@@ -2,6 +2,8 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 
+
+// Main page layout set
 const Main = () => {
    return (
       <div className='page'>

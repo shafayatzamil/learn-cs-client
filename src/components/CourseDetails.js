@@ -2,6 +2,7 @@ import React from 'react'
 import resume from '../assets/resume.pdf';
 import { Link, useLoaderData } from 'react-router-dom'
 
+// Course details +download btn
 
 const CourseDetails = () => {
    const course = useLoaderData()

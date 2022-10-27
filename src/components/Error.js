@@ -1,5 +1,6 @@
 import React from 'react'
 
+//Error page  set up
 const Error = () => {
    return (
       <div className='h-screen flex items-center justify-center'>

@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useLoaderData } from 'react-router-dom'
 import Modal from './Modal'
 
+
+// Checkout page
 const Checkout = () => {
    const course = useLoaderData()
    const [message, setMessage] = useState('')

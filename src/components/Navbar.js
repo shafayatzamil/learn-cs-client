@@ -5,6 +5,8 @@ import avatar from '../assets/avatar.png'
 import navIcon from '../assets/nav.svg'
 import { hover } from '@testing-library/user-event/dist/hover'
 
+
+///NAv bar set it
 const links = [
    { to: '/', name: 'home' },
    { to: '/courses', name: 'courses' },

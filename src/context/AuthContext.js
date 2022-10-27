@@ -11,6 +11,7 @@ import {
 } from "firebase/auth";
 import app from '../firebase/firebase';
 
+// Context set for share data
 const auth = getAuth(app);
 export const AuthContext = createContext();
 

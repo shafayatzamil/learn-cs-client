@@ -1,5 +1,6 @@
 import React from "react";
 
+// All question ans
 const Blog = () => {
   return (
     <div className="border border-indigo-600">

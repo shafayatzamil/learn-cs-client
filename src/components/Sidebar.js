@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+
+//set side bar for course catagory
+
 const Sidebar = ({ allCourses }) => {
    return (
       <nav className='col-span-1 md:col-span-4'>

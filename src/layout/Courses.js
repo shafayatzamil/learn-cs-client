@@ -2,6 +2,8 @@ import React from 'react'
 import { Outlet, useLoaderData } from 'react-router-dom'
 import Sidebar from '../components/Sidebar'
 
+
+// Course page layout
 const Courses = () => {
    const allCourses = useLoaderData()
 

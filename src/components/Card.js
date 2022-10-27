@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+
+// card for every courses
 const Card = ({ course }) => {
    return (
       <div className='rounded border-br-1 border-primary p-3'>

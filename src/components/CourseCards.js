@@ -2,6 +2,8 @@ import React from 'react'
 import { useLoaderData } from 'react-router-dom'
 import Card from './Card'
 
+
+//Course card
 const CourseCards = () => {
    const allCourses = useLoaderData()
 

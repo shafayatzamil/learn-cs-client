@@ -11,6 +11,8 @@ import Checkout from "../components/Checkout";
 import ProtectedRoute from "./ProtectedRoute";
 import Blog from "../components/Blog";
 
+
+// Route set for the page
 const router = createBrowserRouter([
    {
       path: '/',

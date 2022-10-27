@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+//homepage first impression of courses
 const Home = () => {
    return (
       <div>
