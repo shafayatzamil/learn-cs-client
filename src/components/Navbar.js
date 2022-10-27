@@ -37,8 +37,9 @@ const Navbar = () => {
             {user && user.uid
                ? (
                   <React.Fragment>
-                     <img src={user.photoURL?user.photoURL:avatar} alt='profile avatar' className={`h-12 w-12 cursor-pointer ${hover?user.displayName:undefined}`} />
                      <button className='button' onClick={logOut}>Logout</button>
+                     <img src={user.photoURL?user.photoURL:avatar} alt='profile avatar' className={`h-12 w-12 rounded-full cursor-pointer ${hover?user.displayName:undefined}`} />
+                     
                   </React.Fragment>
                ) : (
                   <div className='flex gap-3'>
