@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { AuthContext } from '../context/AuthContext'
 import avatar from '../assets/avatar.png'
 import navIcon from '../assets/nav.svg'
+import { hover } from '@testing-library/user-event/dist/hover'
 
 const links = [
    { to: '/', name: 'home' },
@@ -12,7 +13,8 @@ const links = [
 
 const Navbar = () => {
    const [nav, setNav] = useState(false)
-   const { user, logOut } = useContext(AuthContext)
+   const { user, logOut } = useContext(AuthContext);
+   // console.log(user.photoURL)
 
    const toggleNav = () => {
       setNav(!nav)
@@ -35,7 +37,7 @@ const Navbar = () => {
             {user && user.uid
                ? (
                   <React.Fragment>
-                     <img src={avatar} alt='profile avatar' className='h-12 w-12 cursor-pointer' />
+                     <img src={user.photoURL?user.photoURL:avatar} alt='profile avatar' className={`h-12 w-12 cursor-pointer ${hover?user.displayName:undefined}`} />
                      <button className='button' onClick={logOut}>Logout</button>
                   </React.Fragment>
                ) : (

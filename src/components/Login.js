@@ -34,7 +34,7 @@ const Login = () => {
       googleSignIn()
          .then((result) => {
             const user = result.user;
-            console.log(user);
+            console.log(user.photoURL);
             setUser(user);
             setIsLoggedIn(true)
          })

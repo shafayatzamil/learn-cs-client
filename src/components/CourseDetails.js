@@ -1,11 +1,18 @@
 import React from 'react'
+import resume from '../assets/resume.pdf';
 import { Link, useLoaderData } from 'react-router-dom'
+
 
 const CourseDetails = () => {
    const course = useLoaderData()
 
    return (
       <div className='flex flex-col col-span-1 md:col-span-8 gap-8 mb-14'>
+
+         {/* <button className="btn w-16 btn-outline btn-accent">download</button>
+          */}
+          <a href={resume} download='resume'  target='_blank' ><button className="btn w-16 btn-outline btn-accent">download</button></a>
+
          <figure className='flex justify-center border-br-1 border-primary'>
             <img src={course.image} alt='course thumbnail' className='h-full w-full object-cover' />
          </figure>
