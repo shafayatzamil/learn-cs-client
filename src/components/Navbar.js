@@ -6,7 +6,6 @@ import navIcon from '../assets/nav.svg'
 
 const links = [
    { to: '/', name: 'home' },
-   { to: '/about', name: 'about' },
    { to: '/courses', name: 'courses' },
    { to: '/blogs', name: 'blogs' }
 ]

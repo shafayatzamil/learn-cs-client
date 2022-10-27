@@ -9,6 +9,7 @@ import CourseDetails from "../components/CourseDetails";
 import CourseCards from "../components/CourseCards";
 import Checkout from "../components/Checkout";
 import ProtectedRoute from "./ProtectedRoute";
+import Blog from "../components/Blog";
 
 const router = createBrowserRouter([
    {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
                   loader: ({ params }) => fetch(`https://learn-cs-server.vercel.app/courses/${params.id}`)
                }
             ]
+         },
+         {
+            path:'/blogs',
+            element:<Blog></Blog>
          },
          {
             path: '/checkout/:id',
